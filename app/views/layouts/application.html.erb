@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
 
     <title><%= content_for?(:title) ? yield(:title) : "DFMovil" %></title>
+
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -40,17 +43,21 @@
           <!--<li><a href="#">Particulares</a></li>-->
           <li><%= link_to 'Particulares', particulares_path %></li>
           <!--<li><a href="#">Sitios de Taxi</a></li>-->
-          <li><%= link_to 'Sitios de Taxis', taxis_path %></li>
+          <li><%= link_to 'Sitios de Taxis', sitios_path %></li>
          <!-- <li><a href="#">Servicios</a></li>-->
-          <li><%= link_to 'Servicios de Transporte Público', servicios_path %></li>
+          <li><%= link_to 'Servicios de Transporte Público', transportes_path %></li>
         </ul>
       </section>
   </nav>
+
+
     <div class="row">
-      <div class="columns large-12">
-        <%= yield %>
+      <div class="columns large-6">
+            <%= yield %>
       </div>
     </div>
 
   </body>
 </html>
+
+
